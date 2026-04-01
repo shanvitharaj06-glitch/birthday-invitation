@@ -1,1 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Birthday Invitation 🎉</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Animation */
+body {
+    height: 100vh;
+    background: linear-gradient(270deg, #ff6ec4, #7873f5, #42e695);
+    background-size: 600% 600%;
+    animation: gradientBG 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Gradient Animation */
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Card */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;
+    color: white;
+    box-shadow: 0 0 30px rgba(255,255,255,0.3);
+    animation: fadeIn 2s ease;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(50px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Title */
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    animation: glow 2s infinite alternate;
+}
+
+/* Glow Effect */
+@keyframes glow {
+    from {text-shadow: 0 0 10px #fff;}
+    to {text-shadow: 0 0 20px #ffeb3b;}
+}
+
+/* Details */
+.details {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+/* Button */
+.btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #ff4081;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff79a8;
+    transform: scale(1.1);
+}
+
+/* Balloons */
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 50px;
+    height: 70px;
+    background: red;
+    border-radius: 50%;
+    animation: float 6s infinite ease-in;
+}
+
+.balloon::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 50px;
+    background: white;
+    left: 50%;
+    top: 70px;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-120vh);}
+}
+
+/* Different balloons */
+.balloon:nth-child(1) { left: 10%; background: #ff4d4d; animation-duration: 6s;}
+.balloon:nth-child(2) { left: 30%; background: #ffd700; animation-duration: 8s;}
+.balloon:nth-child(3) { left: 50%; background: #00e6e6; animation-duration: 7s;}
+.balloon:nth-child(4) { left: 70%; background: #66ff66; animation-duration: 9s;}
+.balloon:nth-child(5) { left: 90%; background: #ff66cc; animation-duration: 6.5s;}
+
+</style>
+</head>
+
+<body>
+
+<!-- Balloons -->
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+
+<!-- Invitation Card -->
+<div class="card">
+    <h1>🎂 You're Invited!</h1>
+    <p>Join us to celebrate</p>
+
+    <h2>🎉 Shanvitha's Birthday 🎉</h2>
+
+    <div class="details">
+        📅 Date: 10th April <br>
+        ⏰ Time: 6:00 PM <br>
+        📍 Venue: My Home / Party Hall <br>
+    </div>
+
+    <div class="details">
+        🍰 Cake Cutting <br>
+        🎶 Music & Dance <br>
+        🎁 Fun Games & Surprises <br>
+        🍕 Food & Snacks <br>
+        📸 Photo Booth
+    </div>
+
+    <button class="btn">🎉 Join the Party 🎉</button>
+</div>
+
+</body>
+</html>
